@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Sum Elite - Artiste Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/Logo.jpeg" alt="Sum Sum Elite Logo">
+                    <span>Sum Sum Elite</span>
+                </a>
+                <nav class="nav desktop-nav">
+                    <a href="index.html" class="nav-link active">Accueil</a>
+                    <a href="music.html" class="nav-link">Musique</a>
+                    <a href="about.html" class="nav-link">À Propos</a>
+                    <a href="projects.html" class="nav-link">Projets</a>
+                    <a href="gallery.html" class="nav-link">Galerie</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="music.html" class="nav-link">Musique</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="gallery.html" class="nav-link">Galerie</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+        </div>
+        <div class="hero-content">
+            <img src="assets/Logo.jpeg" alt="Sum Sum Elite" class="hero-logo">
+            <h1 class="hero-title">Sum Sum Elite</h1>
+            <p class="hero-tagline">Créateur d'émotions sonores</p>
+            <p class="hero-style">Vocal • Pop Alternative • Émotionnel • Gaming • Instrumental</p>
+            <div class="hero-buttons">
+                <a href="music.html" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Écouter la musique
+                </a>
+                <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18V5l12-2v13"></path>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <circle cx="18" cy="16" r="3"></circle>
+                    </svg>
+                    Spotify
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tracks Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dernières Sorties</h2>
+                <p>Découvrez mes dernières créations musicales</p>
+            </div>
+            <div class="tracks-grid">
+                <div class="track-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/The Majestic.jpg" alt="The Majestic">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3>The Majestic</h3>
+                        <p>Un voyage sonore majestueux et émotionnel</p>
+                    </div>
+                </div>
+                <div class="track-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Galactic Beat.jpg" alt="Galactic Beat">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3>Galactic Beat</h3>
+                        <p>Des rythmes cosmiques et futuristes</p>
+                    </div>
+                </div>
+                <div class="track-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Ascension Suprême.jpg" alt="Ascension Suprême">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3>Ascension Suprême</h3>
+                        <p>Une élévation musicale intense</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="music.html" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                    </svg>
+                    Voir toute la discographie
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Rejoignez l'univers Sum Sum Elite</h2>
+            <p>Suivez-moi sur vos plateformes préférées pour ne rien manquer</p>
+            <div class="social-buttons">
+                <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn btn-spotify">Spotify</a>
+                <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn btn-youtube">YouTube</a>
+                <a href="https://www.instagram.com/sumsumelitemusic" target="_blank" class="btn btn-instagram">Instagram</a>
+                <a href="https://tiktok.com/@sumsum.elitemusic" target="_blank" class="btn btn-tiktok">TikTok</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/Logo.jpeg" alt="Sum Sum Elite">
+                    <h3>Sum Sum Elite</h3>
+                    <p>Créateur d'émotions sonores</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="music.html">Musique</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-icons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" aria-label="Spotify">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sumsumelitemusic" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/@sumsum.elitemusic" target="_blank" aria-label="TikTok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sum Sum Elite. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musique - Sum Sum Elite</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .music-page {
+            padding-top: 100px;
+            padding-bottom: 4rem;
+            min-height: 100vh;
+        }
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .music-card {
+            background: rgba(17, 24, 39, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #1f2937;
+            transition: all 0.5s;
+        }
+        .music-card:hover {
+            transform: scale(1.05);
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+        }
+        .music-card-buttons {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem;
+            padding-top: 0.5rem;
+        }
+        .music-card-buttons a {
+            flex: 1;
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-spotify-small {
+            background-color: #1db954;
+            color: white;
+        }
+        .btn-spotify-small:hover {
+            background-color: #1ed760;
+        }
+        .btn-youtube-small {
+            border: 1px solid #06b6d4;
+            color: #06b6d4;
+        }
+        .btn-youtube-small:hover {
+            background-color: rgba(6, 182, 212, 0.1);
+        }
+        .cta-box {
+            margin-top: 5rem;
+            background: linear-gradient(to bottom right, rgba(17, 24, 39, 0.8), rgba(0, 0, 0, 0.8));
+            backdrop-filter: blur(8px);
+            border-radius: 1rem;
+            padding: 3rem;
+            border: 1px solid #1f2937;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/Logo.jpeg" alt="Sum Sum Elite Logo">
+                    <span>Sum Sum Elite</span>
+                </a>
+                <nav class="nav desktop-nav">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="music.html" class="nav-link active">Musique</a>
+                    <a href="about.html" class="nav-link">À Propos</a>
+                    <a href="projects.html" class="nav-link">Projets</a>
+                    <a href="gallery.html" class="nav-link">Galerie</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="music.html" class="nav-link active">Musique</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="gallery.html" class="nav-link">Galerie</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="music-page">
+        <div class="container">
+            <div class="section-header">
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 1.5rem; background: linear-gradient(to right, #ffffff, #a5f3fc, #99f6e4); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                    Discographie
+                </h1>
+                <p>Explorez l'univers musical de Sum Sum Elite à travers 14 créations uniques</p>
+            </div>
+
+            <div class="music-grid">
+                <!-- Track 1 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/The Majestic.jpg" alt="The Majestic">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">The Majestic</h3>
+                        <p style="min-height: 2.5rem;">Un voyage sonore majestueux et émotionnel</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 2 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Galactic Beat.jpg" alt="Galactic Beat">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Galactic Beat</h3>
+                        <p style="min-height: 2.5rem;">Des rythmes cosmiques et futuristes</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Ascension Suprême.jpg" alt="Ascension Suprême">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Ascension Suprême</h3>
+                        <p style="min-height: 2.5rem;">Une élévation musicale intense</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 4 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Maître Pims.jpg" alt="Maître Pims">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Maître Pims</h3>
+                        <p style="min-height: 2.5rem;">feat. Maître Pims</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 5 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Symphonie Des Âmes.jpg" alt="Symphonie Des Âmes">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Symphonie Des Âmes</h3>
+                        <p style="min-height: 2.5rem;">Une symphonie qui touche l'âme</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 6 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Abrazuame Fuerte.jpg" alt="Abrazame Fuerte">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Abrazame Fuerte</h3>
+                        <p style="min-height: 2.5rem;">Une étreinte musicale passionnée</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 7 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Printemps.jpg" alt="Printemps">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Printemps (Special Version)</h3>
+                        <p style="min-height: 2.5rem;">Version spéciale d'un renouveau printanier</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 8 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Monde Idéal.jpg" alt="Monde Idéal">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Monde Idéal</h3>
+                        <p style="min-height: 2.5rem;">C'est comme de l'amour, c'est comme une flamme</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 9 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Minecraft Story Mode Remix.jpg" alt="Minecraft Story Mode">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Minecraft Story Mode (Remix)</h3>
+                        <p style="min-height: 2.5rem;">Remix gaming atmosphérique</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 10 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Maël.jpg" alt="Maël">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Maël</h3>
+                        <p style="min-height: 2.5rem;">Une composition émotionnelle et personnelle</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 11 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Toujours La.jpg" alt="Toujours là">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Toujours là</h3>
+                        <p style="min-height: 2.5rem;">Présence constante et réconfortante</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 12 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Minecraft Story Mode Remix2.jpg" alt="Minecraft Story Mode Remix 2">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Minecraft Story Mode Remix 2</h3>
+                        <p style="min-height: 2.5rem;">Deuxième itération du remix gaming</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 13 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Astronaute.jpg" alt="Astronaute">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Astronaute</h3>
+                        <p style="min-height: 2.5rem;">feat. MeganTwitch838 - Voyage spatial sonore</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Track 14 -->
+                <div class="music-card">
+                    <div class="track-cover">
+                        <img src="assets/covers/Shivers.jpg" alt="Shivers">
+                        <div class="track-overlay">
+                            <svg class="play-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 style="font-size: 1.125rem;">Shivers</h3>
+                        <p style="min-height: 2.5rem;">Des frissons musicaux intenses</p>
+                    </div>
+                    <div class="music-card-buttons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn-spotify-small">Spotify</a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn-youtube-small">YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="cta-box">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" style="margin: 0 auto 1.5rem;">
+                    <path d="M9 18V5l12-2v13"></path>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+                <h2 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 1rem;">Écoutez sur vos plateformes préférées</h2>
+                <p style="color: #9ca3af; margin-bottom: 2rem; max-width: 48rem; margin-left: auto; margin-right: auto;">
+                    Toutes mes créations sont disponibles sur Spotify, Apple Music, YouTube Music, Deezer et plus encore
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                    <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn btn-spotify">Ouvrir Spotify</a>
+                    <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn btn-outline">Ouvrir YouTube</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/Logo.jpeg" alt="Sum Sum Elite">
+                    <h3>Sum Sum Elite</h3>
+                    <p>Créateur d'émotions sonores</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="music.html">Musique</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-icons">
+                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" aria-label="Spotify">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sumsumelitemusic" target="_blank" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sum Sum Elite. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
