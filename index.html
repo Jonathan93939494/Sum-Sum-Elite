@@ -3,213 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sum Sum Elite - Artiste Musical</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sum Sum Élite Music - 2024-2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background-color: #0a0a0a;
+            color: #d4d4d4;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* Fond animé subtil */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at top, rgba(30, 30, 35, 0.8) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(20, 15, 20, 0.9) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header minimaliste */
+        header {
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+        }
+
+        .logo-small {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            opacity: 0.7;
+            filter: grayscale(100%);
+        }
+
+        /* Section principale */
+        main {
+            padding: 4rem 0;
+        }
+
+        .memorial-section {
+            text-align: center;
+        }
+
+        .rip-image {
+            max-width: 100%;
+            width: 600px;
+            border-radius: 8px;
+            box-shadow: 
+                0 0 60px rgba(0, 0, 0, 0.8),
+                0 0 120px rgba(50, 30, 30, 0.3);
+            margin-bottom: 3rem;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease-out 0.5s both;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 3rem;
+            font-style: italic;
+            animation: fadeIn 2s ease-out 0.8s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #555, transparent);
+            margin: 0 auto 3rem;
+            animation: fadeIn 2s ease-out 1s both;
+        }
+
+        .memorial-text {
+            text-align: left;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .memorial-text p {
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            color: #e8e8e8;
+            text-align: justify;
+            line-height: 2;
+        }
+
+        .memorial-text p:first-child::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 4rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.5rem;
+            color: #fff;
+        }
+
+        .highlight-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.4rem;
+            color: #e0e0e0;
+            text-align: center;
+            font-style: italic;
+            margin: 3rem 0;
+            padding: 2rem;
+            border-left: 3px solid #444;
+            border-right: 3px solid #444;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .signature {
+            text-align: right;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.3rem;
+            color: #999;
+            margin-top: 3rem;
+            font-style: italic;
+        }
+
+        /* Section musique reste disponible */
+        .music-legacy {
+            margin-top: 5rem;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(100, 100, 100, 0.2);
+            text-align: center;
+            animation: fadeIn 2s ease-out 1.5s both;
+        }
+
+        .music-legacy h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            color: #888;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .streaming-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .streaming-link {
+            padding: 0.8rem 1.5rem;
+            border: 1px solid #333;
+            border-radius: 30px;
+            color: #888;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .streaming-link:hover {
+            border-color: #666;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(100, 100, 100, 0.1);
+            margin-top: 3rem;
+        }
+
+        .dates {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            color: #555;
+            letter-spacing: 4px;
+        }
+
+        .copyright {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #444;
+        }
+
+        /* Effet de bougie animée */
+        .candle-glow {
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            width: 4px;
+            height: 4px;
+            background: #ff9933;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px rgba(255, 150, 50, 0.3);
+            animation: flicker 2s infinite alternate;
+            opacity: 0.6;
+        }
+
+        .candle-glow-2 {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 4px;
+            height: 4px;
+            background: #ff9933;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px rgba(255, 150, 50, 0.3);
+            animation: flicker 2.5s infinite alternate;
+            opacity: 0.6;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.95); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .memorial-text p {
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            .highlight-text {
+                font-size: 1.2rem;
+                padding: 1.5rem;
+            }
+
+            .candle-glow, .candle-glow-2 {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <div class="background-overlay"></div>
+    <div class="candle-glow"></div>
+    <div class="candle-glow-2"></div>
+
+    <header>
         <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="assets/Logo.jpeg" alt="Sum Sum Elite Logo">
-                    <span>Sum Sum Elite</span>
-                </a>
-                <nav class="nav desktop-nav">
-                    <a href="index.html" class="nav-link active">Accueil</a>
-                    <a href="music.html" class="nav-link">Musique</a>
-                    <a href="about.html" class="nav-link">À Propos</a>
-                    <a href="projects.html" class="nav-link">Projets</a>
-                    <a href="gallery.html" class="nav-link">Galerie</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </nav>
-                <button class="menu-toggle" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <nav class="mobile-nav" id="mobileNav">
-                <a href="index.html" class="nav-link active">Accueil</a>
-                <a href="music.html" class="nav-link">Musique</a>
-                <a href="about.html" class="nav-link">À Propos</a>
-                <a href="projects.html" class="nav-link">Projets</a>
-                <a href="gallery.html" class="nav-link">Galerie</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
+            <img src="assets/Logo.jpeg" alt="Sum Sum Elite" class="logo-small">
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-        </div>
-        <div class="hero-content">
-            <img src="assets/Logo.jpeg" alt="Sum Sum Elite" class="hero-logo">
-            <h1 class="hero-title">Sum Sum Elite</h1>
-            <p class="hero-tagline">Créateur d'émotions sonores</p>
-            <p class="hero-style">Vocal • Pop Alternative • Émotionnel • Gaming • Instrumental</p>
-            <div class="hero-buttons">
-                <a href="music.html" class="btn btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                    Écouter la musique
-                </a>
-                <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn btn-outline">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18V5l12-2v13"></path>
-                        <circle cx="6" cy="18" r="3"></circle>
-                        <circle cx="18" cy="16" r="3"></circle>
-                    </svg>
-                    Spotify
-                </a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Tracks Section -->
-    <section class="featured-section">
+    <main>
         <div class="container">
-            <div class="section-header">
-                <h2>Dernières Sorties</h2>
-                <p>Découvrez mes dernières créations musicales</p>
-            </div>
-            <div class="tracks-grid">
-                <div class="track-card">
-                    <div class="track-cover">
-                        <img src="assets/covers/shivers.jpg" alt="Shivers">
-                        <div class="track-overlay">
-                            <svg class="play-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="track-info">
-                        <h3>Shivers</h3>
-                        <p>Des frissons musicaux intenses</p>
-                    </div>
-                </div>
-                <div class="track-card">
-                    <div class="track-cover">
-                        <img src="assets/covers/astronaute.jpg" alt="Astronaute">
-                        <div class="track-overlay">
-                            <svg class="play-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="track-info">
-                        <h3>Astronaute</h3>
-                        <p>feat. MeganTwitch838 - Voyage spatial sonore</p>
-                    </div>
-                </div>
-                <div class="track-card">
-                    <div class="track-cover">
-                        <img src="assets/covers/minecraftstorymoderemix2.jpg" alt="Minecraft Story Mode Remix 2">
-                        <div class="track-overlay">
-                            <svg class="play-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="track-info">
-                        <h3>Minecraft Story Mode Remix 2</h3>
-                        <p>Deuxième itération du remix gaming</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-cta">
-                <a href="music.html" class="btn btn-secondary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
-                    </svg>
-                    Voir toute la discographie
-                </a>
-            </div>
-        </div>
-    </section>
+            <section class="memorial-section">
+                <img src="assets/rip.png" alt="RIP Sum Sum Élite Music 2024-2026" class="rip-image">
+                
+                <h1 class="title">C'EST LA FIN</h1>
+                <p class="subtitle">Un chapitre se ferme, une gratitude demeure</p>
+                
+                <div class="divider"></div>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Rejoignez l'univers Sum Sum Elite</h2>
-            <p>Suivez-moi sur vos plateformes préférées pour ne rien manquer</p>
-            <div class="social-buttons">
-                <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" class="btn btn-spotify">Spotify</a>
-                <a href="https://youtube.com/@sumsumelitemusic" target="_blank" class="btn btn-youtube">YouTube</a>
-                <a href="https://www.instagram.com/sumsumelitemusic" target="_blank" class="btn btn-instagram">Instagram</a>
-                <a href="https://tiktok.com/@sumsum.elitemusic" target="_blank" class="btn btn-tiktok">TikTok</a>
-            </div>
-        </div>
-    </section>
+                <div class="memorial-text">
+                    <p>Merci à toutes et à tous d'avoir suivi l'aventure Sum Sum Élite. Cette chaîne a été bien plus qu'un projet : c'était un espace de partage, de musique, de passion et de rencontres, rendu vivant grâce à vous. Chaque vue, chaque commentaire, chaque écoute a donné du sens à ce que je faisais ici. Aujourd'hui, je décide de tourner cette page et de fermer définitivement la chaîne, avec beaucoup d'émotion mais aussi de gratitude. Rien de tout cela n'aurait eu la même valeur sans votre soutien. Merci pour votre présence, votre énergie et tous ces moments partagés. L'histoire de Sum Sum Élite s'arrête ici, mais la musique, elle, continue autrement.</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/Logo.jpeg" alt="Sum Sum Elite">
-                    <h3>Sum Sum Elite</h3>
-                    <p>Créateur d'émotions sonores</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="music.html">Musique</a></li>
-                        <li><a href="about.html">À Propos</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Suivez-moi</h4>
-                    <div class="social-icons">
-                        <a href="https://open.spotify.com/artist/7zuRaZUJIhLoBUhVXM3XaF" target="_blank" aria-label="Spotify">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 18V5l12-2v13"></path>
-                                <circle cx="6" cy="18" r="3"></circle>
-                                <circle cx="18" cy="16" r="3"></circle>
-                            </svg>
-                        </a>
-                        <a href="https://youtube.com/@sumsumelitemusic" target="_blank" aria-label="YouTube">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/sumsumelitemusic" target="_blank" aria-label="Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="https://tiktok.com/@sumsum.elitemusic" target="_blank" aria-label="TikTok">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 18V5l12-2v13"></path>
-                                <circle cx="6" cy="18" r="3"></circle>
-                                <circle cx="18" cy="16" r="3"></circle>
-                            </svg>
-                        </a>
+                    <p>Deux années intenses, riches en créations, en découvertes et en émotions. De « The Majestic » à « Galactic Beat », de « Symphonie Des Âmes » à « Astronaute », chaque morceau portait une part de moi, une histoire, un fragment d'univers que je voulais partager avec vous. Ces 14 titres resteront à jamais gravés comme le témoignage d'une époque, d'une passion brûlante pour la création musicale.</p>
+
+                    <div class="highlight-text">
+                        "La musique ne meurt jamais vraiment. Elle se transforme, elle voyage, elle vit dans le cœur de ceux qui l'ont écoutée."
                     </div>
+
+                    <p>Ce n'est pas un adieu à la musique elle-même, mais à ce chapitre précis de ma vie. Les mélodies que nous avons partagées ensemble continueront d'exister, quelque part entre vos playlists et vos souvenirs. Et qui sait ce que l'avenir réserve ? Les fins sont souvent des commencements déguisés.</p>
+
+                    <p>À vous tous qui avez cru en ce projet, qui avez partagé mes morceaux, qui m'avez envoyé des messages d'encouragement dans les moments de doute : vous avez fait de Sum Sum Élite ce qu'il était. Cette aventure était la nôtre, pas seulement la mienne.</p>
+
+                    <p>Prenez soin de vous. Continuez à écouter de la musique, à créer, à rêver. Et n'oubliez jamais : chaque fin porte en elle la promesse d'un nouveau départ.</p>
+
+                    <p class="signature">— Sum Sum Élite</p>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; © 2026 Sum Sum Elite. Tous droits réservés.</p>
-            </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="dates">2024 — 2026</p>
+            <p class="copyright">Sum Sum Élite Music · Pour toujours dans nos cœurs</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
     <script src="//code.tidio.co/79zwmfuev0ktatazmsvdpt0yxekbzglb.js" async></script>
 </body>
 </html>
